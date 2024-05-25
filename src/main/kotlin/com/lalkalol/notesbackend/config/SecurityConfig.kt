@@ -31,7 +31,7 @@ class SecurityConfig(
             .authorizeHttpRequests { authorizeRequests ->
                 authorizeRequests
                     .requestMatchers("/api/auth/**").permitAll()
-                    .requestMatchers("/api/**").authenticated()
+                    .requestMatchers("/api/notes/**").authenticated()
             }
             .formLogin { fl ->
                 fl
